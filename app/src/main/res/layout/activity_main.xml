@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="1dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/back"
+
+    tools:context="com.example.massyon.phonecall.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/incoming"
+        android:orientation="vertical">
+        <!-- EditText for entering a phone number  -->
+        <TextView
+        android:id="@+id/text_main1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="15dp"
+        android:inputType="phone"
+        android:text="911"
+        android:textColor="#990000"
+            android:textStyle="bold"
+        android:textSize="35sp"
+        />
+
+        <!-- The callNumber() method will be called by this button.  -->
+        <ImageButton
+            android:id="@+id/phone_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_toEndOf="@id/text_main1"
+            android:layout_toRightOf="@id/text_main1"
+            android:contentDescription="@string/make_a_call"
+            android:onClick="callNumber1"
+            android:src="@drawable/call"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/text_main2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="25dp"
+            android:inputType="phone"
+            android:text="617-817-3687"
+            android:textStyle="bold|italic"
+            android:textColor="#000000"
+            android:textSize="35sp" />
+
+
+        <!-- The callNumber() method will be called by this button.  -->
+        <ImageButton
+            android:id="@+id/phone_icon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_toEndOf="@id/text_main2"
+            android:layout_toRightOf="@id/text_main2"
+            android:contentDescription="@string/make_a_call"
+            android:onClick="callNumber2"
+            android:src="@drawable/call"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_retry"
+        android:contentDescription="@string/retry"
+
+        android:text="@string/retry"
+        android:visibility="invisible"
+        android:onClick="retryApp"/>
+
+    <TextView
+        android:id="@+id/incoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_retry"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        android:text="erere"/>
+
+
+</RelativeLayout>
