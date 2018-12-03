@@ -5,6 +5,8 @@
     package="com.example.massyon.phonecall">
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+   <!-- <uses-permission android:name="android.permission.CALL_PRIVILEGED" />-->
+
 
     <application
         android:allowBackup="true"
